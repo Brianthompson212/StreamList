@@ -1,10 +1,11 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import StreamList from "./components/StreamList";
+import Navbar from "./components/Navbar";
+import About from "./components/About";
 import Movies from "./components/Movies";
 import Cart from "./components/Cart";
-import About from "./components/About";
-import Navbar from "./components/Navbar"; // If you have a Navbar component
+import StreamList from "./components/StreamList";
+import Profile from "./components/Profile";
 
 function App() {
   return (
@@ -12,9 +13,10 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<StreamList />} />
+        <Route path="/about" element={<About />} />
         <Route path="/movies" element={<Movies />} />
         <Route path="/cart" element={<Cart />} />
-        <Route path="/about" element={<About />} />
+        <Route path="/profile" element={<Profile />} />
       </Routes>
     </Router>
   );

@@ -1,19 +1,28 @@
 .navbar {
-    background: #e2820c;
-    padding: 30px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  .navbar ul {
-    list-style: none;
-    display: flex;
-  }
-  .navbar li {
-    margin: 0 10px;
-  }
-  .navbar a {
-    text-decoration: none;
-    color: rgb(19, 19, 19);
-  }
-  
+  background-color: #222;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+
+.logo {
+  font-size: 24px;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.navbar li a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.navbar li a:hover {
+  color: #1E90FF;
+}
