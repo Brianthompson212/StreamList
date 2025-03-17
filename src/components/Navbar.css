@@ -1,6 +1,6 @@
 .navbar {
-    background: #333;
-    padding: 10px;
+    background: #e2820c;
+    padding: 30px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -14,6 +14,6 @@
   }
   .navbar a {
     text-decoration: none;
-    color: white;
+    color: rgb(19, 19, 19);
   }
   
