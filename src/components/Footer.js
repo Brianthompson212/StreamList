@@ -17,6 +17,7 @@ function Footer() {
       </div>
       <div className="flex gap-4">
         <a href="/support">Support</a>
+        <a href="/support">   *   </a>
         <a href="/about">About Us</a>
       </div>
     </footer>

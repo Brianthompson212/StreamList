@@ -4,7 +4,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: white;
+  color: rgb(209, 16, 239);
 }
 
 .logo {
@@ -18,7 +18,7 @@
 }
 
 .navbar li a {
-  color: white;
+  color: rgb(234, 12, 171);
   text-decoration: none;
   transition: color 0.3s;
 }
