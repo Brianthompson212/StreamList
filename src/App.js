@@ -6,18 +6,22 @@ import Movies from "./components/Movies";
 import Cart from "./components/Cart";
 import StreamList from "./components/StreamList";
 import Profile from "./components/Profile";
+import Footer from "./components/Footer";
 
 function App() {
   return (
     <Router>
       <Navbar />
-      <Routes>
-        <Route path="/" element={<StreamList />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/movies" element={<Movies />} />
-        <Route path="/cart" element={<Cart />} />
-        <Route path="/profile" element={<Profile />} />
-      </Routes>
+      <div className="min-h-screen">
+        <Routes>
+          <Route path="/" element={<StreamList />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/movies" element={<Movies />} />
+          <Route path="/cart" element={<Cart />} />
+          <Route path="/profile" element={<Profile />} />
+        </Routes>
+      </div>
+      <Footer />
     </Router>
   );
 }
