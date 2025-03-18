@@ -1,13 +1,66 @@
-body {
+/* General reset for html and body */
+html, body {
   margin: 0;
+  padding: 0;
+  height: 100%; /* Ensure full viewport height */
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #111;
+  color: white;
 }
 
+/* Set up your main React root element for a flexible layout */
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Minimum viewport height */
+}
+
+/* Ensure content pushes footer to bottom */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.content {
+  flex: 1; /* Expand main content area to fill space */
+  padding: 20px; /* Adjust padding as needed */
+}
+
+/* Footer styling */
+.footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: auto; /* Pushes footer to bottom */
+}
+
+/* Social media and footer links styling */
+.social-links,
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 1rem; /* Space between links */
+  margin: 0.5rem 0;
+}
+
+/* Scrollbar customization (optional but nice) */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #222;
+}
+
+/* Code Block Styling (if used in app) */
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }

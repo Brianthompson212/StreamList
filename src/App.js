@@ -11,17 +11,19 @@ import Footer from "./components/Footer";
 function App() {
   return (
     <Router>
-      <Navbar />
-      <div className="min-h-screen">
-        <Routes>
-          <Route path="/" element={<StreamList />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/movies" element={<Movies />} />
-          <Route path="/cart" element={<Cart />} />
-          <Route path="/profile" element={<Profile />} />
-        </Routes>
+      <div className="flex flex-col min-h-screen">
+        <Navbar />
+        <main className="flex-grow container mx-auto p-4">
+          <Routes>
+            <Route path="/" element={<StreamList />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/movies" element={<Movies />} />
+            <Route path="/cart" element={<Cart />} />
+            <Route path="/profile" element={<Profile />} />
+          </Routes>
+        </main>
+        <Footer />
       </div>
-      <Footer />
     </Router>
   );
 }
