@@ -5,8 +5,9 @@ import About from "./components/About";
 import Movies from "./components/Movies";
 import Cart from "./components/Cart";
 import StreamList from "./components/StreamList";
+import MovieSearch from "./components/MovieSearch"; // Added
 import Login from "./components/Login";
-import Footer from "./components/Footer"; // Ensure Footer remains
+import Footer from "./components/Footer";
 
 function App() {
   const [user, setUser] = useState("");
@@ -26,6 +27,7 @@ function App() {
         <Route path="/movies" element={<Movies />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/about" element={<About />} />
+        <Route path="/search" element={<MovieSearch />} /> {/* Added this line */}
         <Route path="/login" element={<Login setUser={setUser} />} />
       </Routes>
       <Footer />
