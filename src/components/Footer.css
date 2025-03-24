@@ -4,20 +4,31 @@
     display: flex;
     justify-content: space-between;
     padding: 10px;
-    position: absolute;
+    position: fixed;
     bottom: 0;
     width: 100%;
     height: 50px;
-  }
-  
-  .footer-left,
-  .footer-right {
+}
+
+.footer-left,
+.footer-right {
     display: flex;
     gap: 15px;
-  }
-  
-  .footer a {
+}
+
+.footer a {
     color: white;
     text-decoration: none;
-  }
-  
+}
+
+/* Ensure the footer does not overlap content */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.main-content {
+    min-height: calc(100vh - 50px); /* Full viewport height minus footer height */
+    padding-bottom: 50px; /* Space for the footer */
+}

@@ -33,9 +33,29 @@ function App() {
     localStorage.setItem("cart", JSON.stringify(cart));
   }, [cart]);
 
-  // Add to Cart
+  // Add to Cart with Duplicate Handling
   const addToCart = (item) => {
-    setCart((prevCart) => [...prevCart, item]);
+    setCart((prevCart) => {
+      const existingItem = prevCart.find((cartItem) => cartItem.id === item.id);
+
+      // If it's a subscription and already exists in the cart, show an alert and return the original cart
+      if (existingItem && item.subscription) {
+        alert("You can only add one subscription at a time.");
+        return prevCart;
+      }
+
+      // If item already exists and it's not a subscription, increase the quantity
+      if (existingItem) {
+        return prevCart.map((cartItem) =>
+          cartItem.id === item.id
+            ? { ...cartItem, quantity: cartItem.quantity + 1 }
+            : cartItem
+        );
+      }
+
+      // If item doesn't exist, add it to the cart
+      return [...prevCart, { ...item, quantity: 1 }];
+    });
   };
 
   // Remove from Cart
@@ -47,7 +67,7 @@ function App() {
   const updateQuantity = (itemId, quantity) => {
     setCart((prevCart) =>
       prevCart.map((item) =>
-        item.id === itemId ? { ...item, quantity } : item
+        item.id === itemId ? { ...item, quantity: Math.max(quantity, 1) } : item
       )
     );
   };
@@ -59,7 +79,7 @@ function App() {
         <Route path="/" element={<StreamList />} />
         <Route path="/movies" element={<Movies addToCart={addToCart} />} />
         <Route path="/cart" element={<Cart cart={cart} removeFromCart={removeFromCart} updateQuantity={updateQuantity} />} />
-        <Route path="/subscriptions" element={<Subscriptions addToCart={addToCart} />} />
+        <Route path="/subscriptions" element={<Subscriptions addToCart={addToCart} cart={cart} />} />
         <Route path="/about" element={<About />} />
         <Route path="/search" element={<MovieSearch />} />
         <Route path="/login" element={<Login setUser={setUser} />} />
