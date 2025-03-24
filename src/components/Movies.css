@@ -12,8 +12,8 @@
   }
   
   .movie img {
-    width: 500px;
-    height: 700px;
+    width: 250px;
+    height: 350px;
     object-fit: cover;
     border-radius: 8px;
   }
