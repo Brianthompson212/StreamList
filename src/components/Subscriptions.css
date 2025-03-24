@@ -1,0 +1,15 @@
+.subscriptions-container {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .subscription-item {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #444;
+    border-radius: 5px;
+    background-color: #222;
+    color: white;
+  }
+  

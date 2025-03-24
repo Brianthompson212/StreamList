@@ -16,6 +16,7 @@ function Navbar({ user, setUser, cartCount }) {
         <li><Link to="/">Home</Link></li>
         <li><Link to="/movies">Movies</Link></li>
         <li><Link to="/search">Search</Link></li>
+        <li><Link to="/subscriptions">Subscriptions</Link></li>
         <li><Link to="/cart">Cart ({cartCount})</Link></li>
         {user ? (
           <>

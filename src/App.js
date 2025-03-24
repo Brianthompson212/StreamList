@@ -6,6 +6,7 @@ import Movies from "./components/Movies";
 import Cart from "./components/Cart";
 import StreamList from "./components/StreamList";
 import MovieSearch from "./components/MovieSearch";
+import Subscriptions from "./components/Subscriptions";
 import Login from "./components/Login";
 import Footer from "./components/Footer";
 
@@ -58,6 +59,7 @@ function App() {
         <Route path="/" element={<StreamList />} />
         <Route path="/movies" element={<Movies addToCart={addToCart} />} />
         <Route path="/cart" element={<Cart cart={cart} removeFromCart={removeFromCart} updateQuantity={updateQuantity} />} />
+        <Route path="/subscriptions" element={<Subscriptions addToCart={addToCart} />} />
         <Route path="/about" element={<About />} />
         <Route path="/search" element={<MovieSearch />} />
         <Route path="/login" element={<Login setUser={setUser} />} />
