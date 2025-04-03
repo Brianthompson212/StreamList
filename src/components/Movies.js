@@ -1,11 +1,11 @@
 import React from "react";
-import "./Movies.css"; // <-- Import your CSS file here
+import "./Movies.css"; // Import your CSS file here
 
 function Movies() {
   const movies = [
-    { id: 1, title: "Inception", image: "/images/inception.jpg" },
-    { id: 2, title: "The Matrix", image: "/images/matrix.jpg" },
-    { id: 3, title: "Interstellar", image: "/images/interstellar.jpg" },
+    { id: 1, title: "Inception", image: `${process.env.PUBLIC_URL}/images/inception.jpg` },
+    { id: 2, title: "The Matrix", image: `${process.env.PUBLIC_URL}/images/matrix.jpg` },
+    { id: 3, title: "Interstellar", image: `${process.env.PUBLIC_URL}/images/interstellar.jpg` },
   ];
 
   return (
