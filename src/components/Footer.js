@@ -11,7 +11,7 @@ function Footer() {
       </div>
       <div className="footer-right">
         <a href="/support">Support</a>
-        <a href="/about">About Us</a>
+        <a href="/about">About Us     ..</a>
       </div>
     </footer>
   );
